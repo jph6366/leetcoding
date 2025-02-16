@@ -1,6 +1,6 @@
 from subsequences.isSubsequence import isSubsequence
 
-def test_level_1():
+def test_level_1(): # 7/21 test cases on 392. Is Subsequence
 
     assert isSubsequence("", "") == True
     assert isSubsequence("abc", "abahbagdc") == True
@@ -17,3 +17,4 @@ def test_level_1():
 
     assert isSubsequence("twn", 
                          "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxtxxxxxxxxxxxxxxxxxxxxwxxxxxxxxxxxxxxxxxxxxxxxxxn") == True
+    # @TODO 14/21 test cases remaining
