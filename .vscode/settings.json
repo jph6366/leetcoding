@@ -1,0 +1,9 @@
+{
+    "python.REPL.enableREPLSmartSend": false,
+    "files.associations": {
+        "*.rst": "restructuredtext",
+        "string": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp"
+    }
+}
