@@ -1,4 +1,4 @@
-# === Generic Subsequence Functions ===
+# === Generic Subsequence Validation Function ===
 
 def isSubsequence(s: str, t: str) -> bool:
     """

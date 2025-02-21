@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>longestIncreasingSubsequence.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>longestIncreasingSubsequence.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <h3><span id="generic-subsequence-validation-function" href="generic-subsequence-validation-function"> Generic Subsequence Validation Function </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      <p>This function is given an integer array nums, return the length of
+the longest strictly increasing subsequence.</p>
+<p>The longest strictly increasing subsequence of an array of integers 
+is formed from the original and by deleting some or none of the 
+elements, without changing the relative order of the remaining 
+characters.
+(i.e. [1,2,3,7] is the longest increasing subsequence of [9,1,4,2,3,3,7])</p>
+<p>Args:
+nums -&gt; Array<Integer></p>
+<p>Returns -&gt; Number</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">longestIncreasingSubsequence</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <p>subsequence is basically subarray without a requirement searching for contiguous order</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <p>brute force dfs
+use decision tree to visualize
+generate every possible subsequence in O(2^n) time and O(n) space 
+we want to get generate the result starting at every index
+nums: [1,2,4,3] =&gt; returns {  <br />
+subsequenceLengthAtIndex[0] = 3,<br />
+subsequenceLengthAtIndex[1] = 2, 
+subsequenceLengthAtIndex[2] = 1, 
+subsequenceLengthAtIndex[3] = 1  <br />
+}</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      <p>dfs with caching
+iterates in O(n^2) time and O(n) space
+nums: [1,2,4,3]
+subsequenceLengthAtIndex[3] = 1
+subsequenceLengthAtIndex[2] = max(1, 1+LIS[3]) ? is nums[2] &lt; nums[3] -&gt; not increasing -&gt; then returns 1
+subsequenceLengthAtIndex[1] = max(1, 1+LIS[2], 1+LIS[3]) returns 2
+subsequenceLengthAtIndex[0] = max(1, 1+LIS[1], 1+LIS[2], 1+LIS[3]) returns 3</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="n">LIS</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      <p>Bottom-Up Dynamic Programming</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># starts at last index and goes all the way to zero</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span> <span class="c1"># iterate through every subsequence that comes after index i</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span> <span class="c1"># j comes after so check if its increasing</span>
+                <span class="n">LIS</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">LIS</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">1</span><span class="o">+</span><span class="n">LIS</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="c1"># update longest increasing subsequence at index i and set it to the </span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">LIS</span><span class="p">)</span> <span class="c1"># max of a list in O(n) time</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      <h3><span id="analysis-of-data-structures,-algorithms,-and-approaches" href="analysis-of-data-structures,-algorithms,-and-approaches"> Analysis of Data Structures, Algorithms, and Approaches </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">- Big O is a way to categorize your algos time or memory requirements based on input</span>
+<span class="sd">- it is not meant to be an exact measurement</span>
+<span class="sd">- growth is with respect to input</span>
+
+<span class="sd">m, for length of string t</span>
+<span class="sd">Time:O(m) Space:O(1)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
