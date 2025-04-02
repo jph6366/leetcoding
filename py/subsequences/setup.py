@@ -29,6 +29,9 @@ setup(
 
     install_requires=[],
 
+    tests_require=['pytest'],
+    test_suite='tests',
+
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'License :: OSI Approved :: MIT License',

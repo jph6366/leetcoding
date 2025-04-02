@@ -17,6 +17,9 @@ Writing A New Example
 - Check for an existing package for the relevant topic, otherwise create a new package.
 - Trailblaze the solution to the problem and include comments and docstrings.
 - Unlock all test cases and verify the solution meets expectations.
+
+Run tests using pytest
+
 - Utilize pycco to generate easy to read documentation.
 
 Installation
