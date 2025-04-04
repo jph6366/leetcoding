@@ -213,3 +213,18 @@ def memoize_subproblem(i, j):
             L[i][j] = max(memoize_subproblem(i+1, j), memoize_subproblem(i, j+1))
     return L[i][j]
 
+
+# === Iterative Subsequence Search w/ Tabulation (Bottom-Up Dynamic Programming) ===
+
+def iterative_lcs_length(A, B):
+    m, n = len(A), len(B)
+    L = [[0 for _ in range(n+1)] for _ in range(m+1)] 
+
+
+    for i in range(m - 1, -1, -1): # botttom right to top left
+        for j in range(n - 1, -1, -1):
+            if A[i] == B[j]:L[i][j] = 1 + L[i+1][j+1]
+            else:L[i][j] = max(L[i+1][j], L[i][j+1])
+    return L[0][0]
+
+# === Space-Efficient Subsequence Search  ===
