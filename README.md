@@ -18,6 +18,7 @@ I sought out some reviews of the flash card softwares out there because I find t
 
 
 Below is a graph of the result of simulation that SM-17 is better than SM-2
+(pulled from https://www.masterhowtolearn.com/2018-11-11-my-comparison-between-anki-and-supermemo/)
 ![SuperMemo2vsSuperMemo17](./doc/spaced_repetition_algorithm_contest.png)
 
 "The least squares metric for Alg SM-2 equals ~54% as compared to ~37% for Algorithm SM-17. This does not sound like a lot, but it may easily double or triple the review workload (esp. for shorter intervals).”
