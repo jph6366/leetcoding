@@ -1,20 +1,32 @@
-# leetcoding
+# LEETCODING
 
-A repository for solving and summarizing coding problems in preparation for technical interviews
+A repository for solving and summarizing coding problems in preparation for technical interviews.
+I explore different facets of study aids for coding interviews and document the process for the next struggling code-monkey.
 
-## HOW TO WRITE A NEW EXAMPLE
+## FLASH CARDS
 
-1. Walk through problem and identify edge cases and base case(s)
-2. Write brute force with meaningful comments
-3. Optimize with design choices and remove code smell
-4. Refactor for dynamic programming and/or alternative data structures and algorithms
-5. Write up test data, test cases, and unit tests
-6. Provide a README.MD display images, diagrams, and  walk through the thought & build process.
+I sought out some reviews of the flash card softwares out there because I find the manual handwriting of flash cards to be unproductive, especially since the actual coding is done on a screen! Fortunately white board technology has been invented to aid in handwriting concepts much easier, but we lose the repetition quality the flash cards offer. This repetition is better known as spaced repetition, learning technique based on increasing intervals of time between subsequent review of the learned material. 
+ - **SuperMemo (from "Super Memory")** is a learning method and software package developed by SuperMemo World and SuperMemo R&D with Piotr Woźniak in Poland from 1985 to the present.
+    - They have archived a lovely list of bullet points chronologically depicting the [History of SuperMemo](https://super-memory.com/english/history.htm), which reads from Hermann Ebbinghaus's Forgetting curve (1885) => Robert Bjork's theory of disuse (1969) => to finally Piotr Wozniak's computational spaced repetition, i.e. the technique in which knowledge is reviewed in optimum intervals that are determined by a computer with the goal of reaching a desired level of knowledge retention. 
+        - For a detailed description of the first algorithm see: [Using SuperMemo without a computer](https://super-memory.com/articles/paper.htm)
 
-- Optionally add readings and articles to strengthen comprehension and deepen knowledge
-- ...
+ - **Anki** is a free and open-source flashcard program and implements the SM-2 algorithm, read more on the [SuperMemo algorithm (SM-2)](https://en.wikipedia.org/wiki/SuperMemo#Description_of_SM-2_algorithm),
+    - The SM-2 algorithm in Anki been modified to allow priorities on cards and to show flashcards in order of their urgency. Anki 23.10+ also has a native implementation of the Free Spaced Repetition Scheduler (FSRS) algorithm, which allows for more optimal spacing of card repetitions.
 
-## DATA STRUCTURES AND ALGORITHMS
+**So which is software and algorithm implementation is better?**
+- SuperMemo currently uses [SM-18](https://supermemo.guru/wiki/Algorithm_SM-18) and its hard to find a definitive answer due to the nature of the validity for metrics of proving one's ability for retrieval and retention (but there is a technical comparison for [SM-17 vs. older SuperMemos](https://supermemopedia.com/wiki/Algorithm_SM-17_vs._older_SuperMemos)).
+
+
+Below is a graph of the result of simulation that SM-17 is better than SM-2
+![SuperMemo2vsSuperMemo17](./doc/spaced_repetition_algorithm_contest.png)
+
+"The least squares metric for Alg SM-2 equals ~54% as compared to ~37% for Algorithm SM-17. This does not sound like a lot, but it may easily double or triple the review workload (esp. for shorter intervals).”
+
+- Based on this we can say in the long-term SuperMemo is superior.
+
+**With all that said, I will be using Anki and Mnemosyne Project, created in 2003 as an offshoot of a neural network project in spaced repetition.**
+ - My workstation has dual-boot of GNU/Linux installed and some recent Windows version, but I prefer working on Ubuntu 22.04
+ - I will have to intentionally insert some long-term retention techniques later on to compensate for whatever SuperMemo provides.
 
 ...
 
