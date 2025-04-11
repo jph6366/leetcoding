@@ -53,6 +53,9 @@ Now lets add our subsequence into solution as a 'first class citizen' and determ
 
 ## This is a good problem for using dynamic programming techniques.
 
+## Most information is derived from lecture notes from 1996
+ https://ics.uci.edu/~eppstein/161/960229.html
+
 Dynamic programming is an algorithmic paradigm, which is an abstraction higher than
 the notion of an algorithm. There are two key attributes that a problem must have 
 in order for dynamic programming to be applicable:
