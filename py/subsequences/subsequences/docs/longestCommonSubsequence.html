@@ -17,7 +17,41 @@
       <div class='octowrap'>
         <a class='octothorpe' href='#section-0'>#</a>
       </div>
-      
+      <p>=== Jump to Thought Process ===</p>
+<h3>Interviewer:</h3>
+<p>Given two strings text1 and text2, 
+ return the length of their longest common subsequence. 
+ If there is no common subsequence, return 0.</p>
+<h3>Interviewee:</h3>
+<p>Let parse the problem statement, 
+the main problem is that we are matching two strings up
+and returning a value that is derived from matching procedure(s).</p>
+<h4>Pragmatism:</h4>
+<p>allow us remove the highest level abstraction, the subsequence.</p>
+<p>Given two strings find their longest common _</p>
+<ul>
+<li>find a matching condition</li>
+<li>compare all possible combinations to find the longest</li>
+<li>the matching condition comparator evaluates common properties between two strings</li>
+</ul>
+<p>Now lets add our subsequence into solution as a &lsquo;first class citizen&rsquo; and determine if they need structure</p>
+<ul>
+<li>
+<p>identify =&gt; environment =&gt; data =&gt; procedure</p>
+<h3>identify</h3>
+<ol>
+<li>subsequence of a string, a substring that can be created by removing any amount of character.</li>
+<li>common subsequence between two strings; requires use of time to iterate through two strings and space to find common characters between two strings.</li>
+<li>longest common subsequence; requires use of time to evaluate longest value and space to store evaluation.</li>
+</ol>
+<h3>environment:</h3>
+<p>python =&gt; generic function</p>
+<h3>data:</h3>
+<p>O(m*n) for strings m and n</p>
+<h3>procedure:</h3>
+<p>iteratively compute result derived from overlapping sub-procedures</p>
+</li>
+</ul>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span></span></pre></div>
@@ -29,7 +63,7 @@
       <div class='octowrap'>
         <a class='octothorpe' href='#section-1'>#</a>
       </div>
-      <h3><span id="preface" href="preface"> Preface </span></h3>
+      <h1>=== Preface ===</h1>
     </div>
     <div class='code'>
       <div class="highlight"><pre></pre></div>
@@ -41,31 +75,9 @@
       <div class='octowrap'>
         <a class='octothorpe' href='#section-2'>#</a>
       </div>
-      <p>Finding the longest common subsequence of two strings is a string matching problem.</p>
-    </div>
-    <div class='code'>
-      <div class="highlight"><pre></pre></div>
-    </div>
-  </div>
-  <div class='clearall'></div>
-  <div class='section' id='section-3'>
-    <div class='docs'>
-      <div class='octowrap'>
-        <a class='octothorpe' href='#section-3'>#</a>
-      </div>
-      <p>This is a good problem for using dynamic programming techniques.</p>
-    </div>
-    <div class='code'>
-      <div class="highlight"><pre></pre></div>
-    </div>
-  </div>
-  <div class='clearall'></div>
-  <div class='section' id='section-4'>
-    <div class='docs'>
-      <div class='octowrap'>
-        <a class='octothorpe' href='#section-4'>#</a>
-      </div>
-      <p>Dynamic programming is an algorithmic paradigm, which is an abstraction higher than
+      <h2>Finding the longest common subsequence of two strings is a string matching problem.</h2>
+<h2>This is a good problem for using dynamic programming techniques.</h2>
+<p>Dynamic programming is an algorithmic paradigm, which is an abstraction higher than
 the notion of an algorithm. There are two key attributes that a problem must have 
 in order for dynamic programming to be applicable:</p>
 <ul>
@@ -94,10 +106,10 @@ from the first decision. (See Bellman, 1957, Chap. III.3.)</p>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-5'>
+  <div class='section' id='section-3'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-5'>#</a>
+        <a class='octothorpe' href='#section-3'>#</a>
       </div>
       <h1>=== Warm-Up ===</h1>
 <p>Suppose you&rsquo;re given a short string (pattern) and long string (text), as in the string matching problem.
@@ -109,17 +121,16 @@ If they do, we say that the pattern is a subsequence of the text.</p>
 <p>State transitions:
 &ldquo;other&rdquo; - any character that doesn&rsquo;t match the current expected character
 &ldquo;n&rdquo;, &ldquo;a&rdquo;, &ldquo;n&rdquo;, &ldquo;o&rdquo; - characters from the pattern &ldquo;nano&rdquo;</p>
-<h3>Pseudo-Code ===&gt;</h3>
     </div>
     <div class='code'>
       <div class="highlight"><pre></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-6'>
+  <div class='section' id='section-4'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-6'>#</a>
+        <a class='octothorpe' href='#section-4'>#</a>
       </div>
       <h4>Can we use this to solve the longest common subsequence, given Strings A &amp; B</h4>
 <p>This finite-automata theoretic method gives the longest prefix of String A
@@ -127,7 +138,7 @@ If they do, we say that the pattern is a subsequence of the text.</p>
   not always a prefix of A.</p>
     </div>
     <div class='code'>
-      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">subseq</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">subseq</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
     <span class="n">P</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>  <span class="c1"># Create an iterator from the pattern string</span>
     <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="nb">next</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
@@ -139,10 +150,10 @@ If they do, we say that the pattern is a subsequence of the text.</p>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-7'>
+  <div class='section' id='section-5'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-7'>#</a>
+        <a class='octothorpe' href='#section-5'>#</a>
       </div>
       <h1>=== Purpose ===</h1>
     </div>
@@ -151,10 +162,10 @@ If they do, we say that the pattern is a subsequence of the text.</p>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-8'>
+  <div class='section' id='section-6'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-8'>#</a>
+        <a class='octothorpe' href='#section-6'>#</a>
       </div>
       <p>Why might we want to solve the longest common subsequence problem?</p>
 <ul>
@@ -194,10 +205,10 @@ If they do, we say that the pattern is a subsequence of the text.</p>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-9'>
+  <div class='section' id='section-7'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-9'>#</a>
+        <a class='octothorpe' href='#section-7'>#</a>
       </div>
       <h3><span id="recursive-subsequence-search-function" href="recursive-subsequence-search-function"> Recursive Subsequence Search Function </span></h3>
     </div>
@@ -206,10 +217,10 @@ If they do, we say that the pattern is a subsequence of the text.</p>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-10'>
+  <div class='section' id='section-8'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-10'>#</a>
+        <a class='octothorpe' href='#section-8'>#</a>
       </div>
       <p>this function is given two strings, A and B, and very inefficiently, recursively
 returns the length of longest common subsequence</p>
@@ -219,14 +230,14 @@ B -&gt; String</p>
 <p>Returns -&gt; Number</p>
     </div>
     <div class='code'>
-      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">recursive_lcs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span></pre></div>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">recursive_lcs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-11'>
+  <div class='section' id='section-9'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-11'>#</a>
+        <a class='octothorpe' href='#section-9'>#</a>
       </div>
       
     </div>
@@ -234,16 +245,16 @@ B -&gt; String</p>
       <div class="highlight"><pre>    <span class="k">if</span> <span class="ow">not</span> <span class="n">A</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">B</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">elif</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">recursive_lcs</span><span class="p">(</span><span class="n">A</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">B</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">recursive_lcs</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">B</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">recursive_lcs</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">B</span><span class="p">),</span> <span class="n">recursive_lcs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-12'>
+  <div class='section' id='section-10'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-12'>#</a>
+        <a class='octothorpe' href='#section-10'>#</a>
       </div>
       <p>The time bounds are binomial coefficients, which (if m=n) are close to 2^n</p>
     </div>
@@ -252,10 +263,10 @@ B -&gt; String</p>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-13'>
+  <div class='section' id='section-11'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-13'>#</a>
+        <a class='octothorpe' href='#section-11'>#</a>
       </div>
       <h3><span id="recursive-subsequence-search-w/-indices-function" href="recursive-subsequence-search-w/-indices-function"> Recursive Subsequence Search w/ Indices Function </span></h3>
     </div>
@@ -265,15 +276,50 @@ B -&gt; String</p>
     </div>
   </div>
   <div class='clearall'></div>
+  <div class='section' id='section-12'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-12'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">lcs_length</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">BB</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span>
+    <span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="n">AA</span><span class="p">,</span> <span class="n">BB</span>
+    <span class="k">return</span> <span class="n">subproblem</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-13'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-13'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">subproblem</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">subproblem</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">subproblem</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">subproblem</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
   <div class='section' id='section-14'>
     <div class='docs'>
       <div class='octowrap'>
         <a class='octothorpe' href='#section-14'>#</a>
       </div>
-      <p>globals</p>
+      <h3><span id="recursive-subsequence-search-w/-memoization-function" href="recursive-subsequence-search-w/-memoization-function"> Recursive Subsequence Search w/ Memoization Function </span></h3>
     </div>
     <div class='code'>
-      <div class="highlight"><pre></pre></div>
+      <div class="highlight"><pre><span class="n">A</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">B</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">L</span> <span class="o">=</span> <span class="p">[]</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
@@ -285,10 +331,12 @@ B -&gt; String</p>
       
     </div>
     <div class='code'>
-      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">lcs_length</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">BB</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">memoize_lcs_length</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">BB</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">L</span>
     <span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="n">AA</span><span class="p">,</span> <span class="n">BB</span>
-    <span class="k">return</span> <span class="n">subproblem</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></pre></div>
+    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> 
+    <span class="k">return</span> <span class="n">memoize_subproblem</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
@@ -300,15 +348,190 @@ B -&gt; String</p>
       
     </div>
     <div class='code'>
-      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">subproblem</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">subproblem</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">subproblem</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">subproblem</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">memoize_subproblem</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">memoize_subproblem</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">memoize_subproblem</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">memoize_subproblem</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-17'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-17'>#</a>
+      </div>
+      <h3><span id="iterative-subsequence-search-w/-tabulation-(bottom-up-dynamic-programming)" href="iterative-subsequence-search-w/-tabulation-(bottom-up-dynamic-programming)"> Iterative Subsequence Search w/ Tabulation (Bottom-Up Dynamic Programming) </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-18'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-18'>#</a>
+      </div>
+      <p>iterative (because it uses nested loops instead of recursion) 
+or bottom up (because the order we fill in the array is from 
+smaller simpler subproblems to bigger more complicated ones)</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">iterative_lcs_length</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> 
 
-</pre></div>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># botttom right to top left</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># saving work by not repeating subproblem computations</span>
+            <span class="k">else</span><span class="p">:</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-19'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-19'>#</a>
+      </div>
+      <p>One disadvantage over memoizing is that this fills in the entire array
+ even when it might be possible to solve the problem by looking at only
+   a fraction of the array&rsquo;s cells.</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-20'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-20'>#</a>
+      </div>
+      <h3><span id="space-efficient-subsequence-search" href="space-efficient-subsequence-search"> Space-Efficient Subsequence Search  </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-21'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-21'>#</a>
+      </div>
+      <p>One disadvantage of the dynamic programming methods we&rsquo;ve described, 
+compared to the original recursion, is that they use a lot of space: O(mn) for the array L (the recursion only uses O(n+m)). </p>
+<p>But the iterative version can be easily modified to use less space &ndash; 
+the observation is that once we&rsquo;ve computed row i of array L, we no longer need the values in row i+1.</p>
+<p>In 1975, Dan Hirschberg showed how to find not just the length, 
+but the longest common subsequence itself, in linear space and O(mn) time.
+The idea is as above to use one-dimensional arrays X and Y to store the rows
+ of the larger two dimensional array L. </p>
+<p>But Hirschberg&rsquo;s method treats the 
+ middle row of array L specially: </p>
+<ul>
+<li>
+<p>for all i&lt;m/2, he stores along with the numbers in X and Y the place where some path (corresponding to a subsequence with that many characters) crosses the middle row. </p>
+</li>
+<li>
+<p>These crossing places can be updated along with the array values, by copying them from X[j+1], Y[j], or Y[j+1] as appropriate.</p>
+</li>
+</ul>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-22'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-22'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">space_efficient_lcs_length</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-23'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-23'>#</a>
+      </div>
+      <p>Ensure A is the shorter string to minimize space (O(min(m, n)))</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="n">B</span><span class="p">,</span> <span class="n">A</span>
+        <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-24'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-24'>#</a>
+      </div>
+      <p>Initialize two arrays of size n+1</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>  <span class="c1"># Iterate from m-1 to 0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>  <span class="c1"># Iterate from n-1 to 0</span>
+            <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">X</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">Y</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">X</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">Y</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-25'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-25'>#</a>
+      </div>
+      <p>Copy X to Y for the next iteration</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>        <span class="n">Y</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-26'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-26'>#</a>
+      </div>
+      <p>Then when the algorithm above has finished with the LCS length in X[0], Hirschberg finds the corresponding crossing place (m/2,k). </p>
+<p>He then solves recursively two LCS problems, one for A[0..m/2-1] and B[0..k-1] and one for A[m/2..m] and B[k..n]. The longest common subsequence is the concatenation of the sequences found by these two recursive calls.</p>
+<p>It is not hard to see that this method uses linear space. What about time complexity? This is a recursive algorithm, with a time recurrence</p>
+<pre><code>T(m,n) = O(mn) + T(m/2,k) + T(m/2,n-k)
+</code></pre>
+<p>You can think of this as sort of like quicksort &ndash; we&rsquo;re breaking both strings into parts. </p>
+<p>But unlike quicksort it doesn&rsquo;t matter that the second string can be broken unequally. </p>
+<p>No matter what k is, the recurrence solves to O(mn). The easiest way to see this is to think about what it&rsquo;s doing in the array L. </p>
+<p>The main part of the algorithm visits the whole array, then the two calls visit two subarrays, one above and left of (m/2,k) and the other below and to the right. </p>
+<p>No matter what k is, the total size of these two subarrays is roughly mn/2. So instead we can write a simplified recurrence</p>
+<pre><code>T(mn) = O(mn) + T(mn/2)
+</code></pre>
+<p>which solves to O(mn) time total.</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
     </div>
   </div>
   <div class='clearall'></div>

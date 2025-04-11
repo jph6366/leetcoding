@@ -1,4 +1,4 @@
-## === Jump to Thought Process ===
+# === Jump to Thought Process ===
 """
 ### Interviewer: 
  Given two strings text1 and text2, 
@@ -99,8 +99,6 @@ State transitions:
 "other" - any character that doesn't match the current expected character
 "n", "a", "n", "o" - characters from the pattern "nano"
 
-### Pseudo-Code ===>
-
 """
 
 
@@ -146,7 +144,6 @@ def subseq(P, T):
    down and reconstructing the module every hot reload.
     - React HMR uses a similar approach to retain component tree and the state.
 """
-
 
 
 # === Recursive Subsequence Search Function ===
@@ -216,6 +213,11 @@ def memoize_subproblem(i, j):
 
 # === Iterative Subsequence Search w/ Tabulation (Bottom-Up Dynamic Programming) ===
 
+"""
+iterative (because it uses nested loops instead of recursion) 
+or bottom up (because the order we fill in the array is from 
+smaller simpler subproblems to bigger more complicated ones)
+"""
 def iterative_lcs_length(A, B):
     m, n = len(A), len(B)
     L = [[0 for _ in range(n+1)] for _ in range(m+1)] 
@@ -223,8 +225,83 @@ def iterative_lcs_length(A, B):
 
     for i in range(m - 1, -1, -1): # botttom right to top left
         for j in range(n - 1, -1, -1):
-            if A[i] == B[j]:L[i][j] = 1 + L[i+1][j+1]
+            if A[i] == B[j]:L[i][j] = 1 + L[i+1][j+1] # saving work by not repeating subproblem computations
             else:L[i][j] = max(L[i+1][j], L[i][j+1])
     return L[0][0]
 
+"""
+One disadvantage over memoizing is that this fills in the entire array
+ even when it might be possible to solve the problem by looking at only
+   a fraction of the array's cells.
+"""
+
 # === Space-Efficient Subsequence Search  ===
+
+"""
+One disadvantage of the dynamic programming methods we've described, 
+compared to the original recursion, is that they use a lot of space: O(mn) for the array L (the recursion only uses O(n+m)). 
+
+But the iterative version can be easily modified to use less space -- 
+the observation is that once we've computed row i of array L, we no longer need the values in row i+1.
+
+In 1975, Dan Hirschberg showed how to find not just the length, 
+but the longest common subsequence itself, in linear space and O(mn) time.
+The idea is as above to use one-dimensional arrays X and Y to store the rows
+ of the larger two dimensional array L. 
+ 
+ But Hirschberg's method treats the 
+ middle row of array L specially: 
+
+
+ - for all i<m/2, he stores along with the numbers in X and Y the place where some path (corresponding to a subsequence with that many characters) crosses the middle row. 
+
+  - These crossing places can be updated along with the array values, by copying them from X[j+1], Y[j], or Y[j+1] as appropriate.
+
+"""
+
+def space_efficient_lcs_length(A, B):
+    m, n = len(A), len(B)
+    # Ensure A is the shorter string to minimize space (O(min(m, n)))
+    if m > n:
+        A, B = B, A
+        m, n = n, m
+    
+    # Initialize two arrays of size n+1
+    X = [0] * (n + 1)
+    Y = [0] * (n + 1)
+    
+    for i in range(m - 1, -1, -1):  # Iterate from m-1 to 0
+        for j in range(n - 1, -1, -1):  # Iterate from n-1 to 0
+            if A[i] == B[j]:
+                X[j] = 1 + Y[j + 1]
+            else:
+                X[j] = max(Y[j], X[j + 1])
+        
+        # Copy X to Y for the next iteration
+        Y = X.copy()
+    
+    return X[0]
+
+"""
+Then when the algorithm above has finished with the LCS length in X[0], Hirschberg finds the corresponding crossing place (m/2,k). 
+
+He then solves recursively two LCS problems, one for A[0..m/2-1] and B[0..k-1] and one for A[m/2..m] and B[k..n]. The longest common subsequence is the concatenation of the sequences found by these two recursive calls.
+
+It is not hard to see that this method uses linear space. What about time complexity? This is a recursive algorithm, with a time recurrence
+
+    T(m,n) = O(mn) + T(m/2,k) + T(m/2,n-k)
+You can think of this as sort of like quicksort -- we're breaking both strings into parts. 
+
+But unlike quicksort it doesn't matter that the second string can be broken unequally. 
+
+No matter what k is, the recurrence solves to O(mn). The easiest way to see this is to think about what it's doing in the array L. 
+
+The main part of the algorithm visits the whole array, then the two calls visit two subarrays, one above and left of (m/2,k) and the other below and to the right. 
+
+No matter what k is, the total size of these two subarrays is roughly mn/2. So instead we can write a simplified recurrence
+
+    T(mn) = O(mn) + T(mn/2)
+    
+which solves to O(mn) time total.
+
+"""
