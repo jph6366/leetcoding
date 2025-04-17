@@ -23,11 +23,7 @@ Below is a graph of the result of simulation that SM-17 is better than SM-2
 
 "The least squares metric for Alg SM-2 equals ~54% as compared to ~37% for Algorithm SM-17. This does not sound like a lot, but it may easily double or triple the review workload (esp. for shorter intervals).”
 
-- Based on this we can say in the long-term SuperMemo is superior.
-
-**With all that said, I will be using Anki and Mnemosyne Project, created in 2003 as an offshoot of a neural network project in spaced repetition.**
- - My workstation has dual-boot of GNU/Linux installed and some recent Windows version, but I prefer working on Ubuntu 22.04
- - I will have to intentionally insert some long-term retention techniques later on to compensate for whatever SuperMemo provides.
+- Based on this we can say in the long-term SuperMemo is superior, although it simply locked to Windows making it hard access and manage on my workstation. I will be using Anki (on Ubuntu 22.04) with a modern spaced-repetition scheduler, which you can check out here at [FSRS4Anki](https://github.com/open-spaced-repetition/fsrs4anki).
 
 ...
 
