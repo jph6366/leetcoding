@@ -21,8 +21,29 @@ KEYSTONE TECHNIQUES AND TALENTS
 
 I sought out some reviews of the flash card softwares out there because I find the manual handwriting of flash cards to be unproductive, especially since the actual coding is done on a screen! Fortunately white board technology has been invented to aid in handwriting concepts much easier, but we lose the repetition quality the flash cards offer. This repetition is better known as spaced repetition, learning technique based on increasing intervals of time between subsequent review of the learned material. 
  - **SuperMemo (from "Super Memory")** is a learning method and software package developed by SuperMemo World and SuperMemo R&D with Piotr Woźniak in Poland from 1985 to the present.
-    - They have archived a lovely list of bullet points chronologically depicting the [History of SuperMemo](https://super-memory.com/english/history.htm), which reads from Hermann Ebbinghaus's Forgetting curve (1885) => Robert Bjork's theory of disuse (1969) => to finally Piotr Wozniak's computational spaced repetition, i.e. the technique in which knowledge is reviewed in optimum intervals that are determined by a computer with the goal of reaching a desired level of knowledge retention. 
-        - For a detailed description of the first algorithm see: [Using SuperMemo without a computer](https://super-memory.com/articles/paper.htm)
+    - They have archived a lovely list of bullet points chronologically depicting the [History of SuperMemo](https://super-memory.com/english/history.htm), which reads from Hermann Ebbinghaus's Forgetting curve (1885) => Robert Bjork's theory of disuse (1969) => to finally Piotr Wozniak's computational spaced repetition, i.e. the technique in which knowledge is reviewed in optimum intervals that are determined by a computer with the goal of reaching a desired level of knowledge retention.
+ ```
+Misattributions unconscious influences Interpreting the subjective sense of perceptual fluency or familiarity poses a challenge of sorts for the
+learner. Prior exposures to stimuli can have long-term priming effects that influence not only the objective speed and/or accuracy of our ability to
+perceive or identify those stimuli, but also our subjective sense of fluency or familiarity... We are susceptible, therefore, to unconscious influences of
+prior events, which can take the form of our misaHributing the source or cause of our sense of perceptual fluency.
+
+...
+
+Our level of learning or knowledge, however, is only one of a number of possible contributors to fluent retrieval. In their analysis, Benjamin and Bjork
+( 1996) distinguish four other "determinants11 of fluent retrieval: frequency and recency of usage, episodic distinctiveness, cue sufficiency, and priming.
+Frequency and recency of usage play an important role because the ad of retrieval is itself a learning event, in that the retrieval of information makes
+that information more retrievable in the future. An item of information that has been accessed frequently will tend to be characterized by fluent retrieval
+at the current point in time. Episodic distinctiveness refers to the collectio of factors, such as salience, emotionality, and temporal isolation, that makes 
+events distinct, hence more readily recallable. Cue sufficiency denotes the effectiveness of the cues guiding the retrieval of desired facts, information, or
+procedures. To the extent that those cues are underspecified-that is, associated with multiple items in memory-retrieval of any one item will be
+slowed, made less reliable, or both, owing to the competitive dynamics that characterize retrieval processes in human memory
+(cf. the cue overload principle; e.g., Watkins and Watkins 1975). Finally, as in the discussion of perceptual fluency, priming, refers to the
+effects of mere prior exposure of some target item. There is now abundant evidence that prior presentation of an item, even in a context nominally unrelated
+to some current task of interest, can increase the speed or likelihood that the item, among other possible items, is retrieved in response to a cue of some kind. 
+```
+  - For a detailed description of the first SM algorithm see: [Using SuperMemo without a computer](https://super-memory.com/articles/paper.htm)
+![image](https://github.com/user-attachments/assets/19c89f23-3c7e-44a8-9c7b-47a3b63832e4)
 
  - **Anki** is a free and open-source flashcard program and implements the SM-2 algorithm, read more on the [SuperMemo algorithm (SM-2)](https://en.wikipedia.org/wiki/SuperMemo#Description_of_SM-2_algorithm),
     - The SM-2 algorithm in Anki been modified to allow priorities on cards and to show flashcards in order of their urgency. Anki 23.10+ also has a native implementation of the Free Spaced Repetition Scheduler (FSRS) algorithm, which allows for more optimal spacing of card repetitions.
