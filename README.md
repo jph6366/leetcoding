@@ -3,6 +3,11 @@
 A repository for solving and summarizing coding problems in preparation for technical interviews.
 I explore different facets of study aids for coding interviews and document the process for the next struggling code-monkey.
 
+KEYSTONE TECHNIQUES AND TALENTS
+- SPACED REPETITION
+- GRADUAL PROGRESSION
+- BORING VARIATIONS
+
 ## FLASH CARDS
 
 I sought out some reviews of the flash card softwares out there because I find the manual handwriting of flash cards to be unproductive, especially since the actual coding is done on a screen! Fortunately white board technology has been invented to aid in handwriting concepts much easier, but we lose the repetition quality the flash cards offer. This repetition is better known as spaced repetition, learning technique based on increasing intervals of time between subsequent review of the learned material. 
