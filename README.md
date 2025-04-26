@@ -8,6 +8,15 @@ KEYSTONE TECHNIQUES AND TALENTS
 - GRADUAL PROGRESSION
 - BORING VARIATIONS
 
+## HARTMAN PROFICIENCY TAXONOMY
+
+1. FAMILIARITY: recognizing flows, mental models, and patterns
+2. COMPREHENSION: discussing the patterns
+3. CONSCIOUS EFFORT: experimenting and learning through trying everything
+4. CONSCIOUS ACTION: mastering the pattterns by knowing what to try
+5. PROFICIENT: finding and manipulating unseen patterns
+6. UNCONSCIOUS COMPETENCE: simple
+
 ## FLASH CARDS
 
 I sought out some reviews of the flash card softwares out there because I find the manual handwriting of flash cards to be unproductive, especially since the actual coding is done on a screen! Fortunately white board technology has been invented to aid in handwriting concepts much easier, but we lose the repetition quality the flash cards offer. This repetition is better known as spaced repetition, learning technique based on increasing intervals of time between subsequent review of the learned material. 
