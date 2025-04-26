@@ -40,7 +40,17 @@ procedures. To the extent that those cues are underspecified-that is, associated
 slowed, made less reliable, or both, owing to the competitive dynamics that characterize retrieval processes in human memory
 (cf. the cue overload principle; e.g., Watkins and Watkins 1975). Finally, as in the discussion of perceptual fluency, priming, refers to the
 effects of mere prior exposure of some target item. There is now abundant evidence that prior presentation of an item, even in a context nominally unrelated
-to some current task of interest, can increase the speed or likelihood that the item, among other possible items, is retrieved in response to a cue of some kind. 
+to some current task of interest, can increase the speed or likelihood that the item, among other possible items, is retrieved in response to a cue of some kind.
+
+...
+
+There are two reasons, then, why it is important to create desirable difficulties for the learner during training. One reason is that manipulations such
+as varying the conditions of practice, reducing feedback to the learner, sequencing materials and tasks to be learned in ways that cause "contextual
+interference," and spacing rather than massing practice sessions, enhance long-term retention and transfer. The other reason is that such manipulations
+also have the potential to inform the learners' own subjective experiences. In the context of the total training experience, such manipulations give learners
+the opportunity to experience the forgetting, errors, and mistakes that result from changes in task or contextual cues, from interference owing to interpolated
+or prior learning, from reduced feedback, and so forth. In an optimal training environment, the learners' successes become more informative as well-that is,
+become a more valid basis for confidence because they constitute more reliable evidence that skills and knowledge will remain accessible over time and in altered circumstances.  
 ```
   - For a detailed description of the first SM algorithm see: [Using SuperMemo without a computer](https://super-memory.com/articles/paper.htm)
 ![image](https://github.com/user-attachments/assets/19c89f23-3c7e-44a8-9c7b-47a3b63832e4)
