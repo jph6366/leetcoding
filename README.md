@@ -1,7 +1,7 @@
 # LEETCODING
 
 A repository for solving and summarizing coding problems in preparation for technical interviews.
-I explore different facets of study aids for coding interviews and document the process for the next struggling code-monkey.
+I explore different facets of study aids for coding interviews and document the process for the struggling code-monkey I am, but could be a style suitable for the next primordial programmer.
 
 KEYSTONE TECHNIQUES AND TALENTS
 - SPACED REPETITION
