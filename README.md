@@ -17,6 +17,13 @@ KEYSTONE TECHNIQUES AND TALENTS
 5. PROFICIENT: finding and manipulating unseen patterns
 6. UNCONSCIOUS COMPETENCE: simple
 
+## LUHMANN'S ZETTELKASTEN
+
+```
+[Learning How to Read](https://luhmann.surge.sh/learning-how-to-read)
+What are we to do with what we have written down? Certainly, at first, we will produce mostly garbage. But we have been educated to expect something useful from our activities and soon lose confidence if nothing useful seems to result. We should, therefore, reflect on whether and how we arrange our notes so that they are available for later access.
+```
+
 ## FLASH CARDS
 
 I sought out some reviews of the flash card softwares out there because I find the manual handwriting of flash cards to be unproductive, especially since the actual coding is done on a screen! Fortunately white board technology has been invented to aid in handwriting concepts much easier, but we lose the repetition quality the flash cards offer. This repetition is better known as spaced repetition, learning technique based on increasing intervals of time between subsequent review of the learned material. 
