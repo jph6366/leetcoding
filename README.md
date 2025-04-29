@@ -21,7 +21,13 @@ KEYSTONE TECHNIQUES AND TALENTS
 
 ```
 [Learning How to Read](https://luhmann.surge.sh/learning-how-to-read)
-What are we to do with what we have written down? Certainly, at first, we will produce mostly garbage. But we have been educated to expect something useful from our activities and soon lose confidence if nothing useful seems to result. We should, therefore, reflect on whether and how we arrange our notes so that they are available for later access.
+
+What are we to do with what we have written down? Certainly, at first, we will produce mostly garbage.
+
+But we have been educated to expect something useful from our activities and
+soon lose confidence if nothing useful seems to result.
+
+We should, therefore, reflect on whether and how we arrange our notes so that they are available for later access.
 ```
 
 ## FLASH CARDS
