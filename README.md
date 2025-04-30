@@ -19,9 +19,9 @@ KEYSTONE TECHNIQUES AND TALENTS
 
 ## LUHMANN'S ZETTELKASTEN
 
-```
 [Learning How to Read](https://luhmann.surge.sh/learning-how-to-read)
 
+```
 What are we to do with what we have written down? Certainly, at first, we will produce mostly garbage.
 
 But we have been educated to expect something useful from our activities and
@@ -29,6 +29,19 @@ soon lose confidence if nothing useful seems to result.
 
 We should, therefore, reflect on whether and how we arrange our notes so that they are available for later access.
 ```
+- **Hypertext** is text displayed on a medium with references to other mediums that the reader can immediately access.
+- Zettelkasten automatically scales itself to the size of the problem you are note-taking through a 'bottom-up' technique.
+ - The **heterarchy** of Zettelkasten is built organically from “bottom-up” via gradual forming of links between the notes.
+- If you want to replicate the functionality of Luhmann’s Zettelkasten, you would have to create a hypertext and limit your entry into it via the most central pages on a topic, from which you would continue by following links.
+
+Zettelkasten notes are atomic and autonomous.
+
+Per [David Clear](https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125):
+
+- The principle of atomicity: The term was coined by Christian Tietze. It means that each note should contain one idea and one idea only. This makes it possible to link ideas with a laser focus.
+- The principle of autonomy: Each note should be autonomous, meaning it should be self-contained and comprehensible on its own. This allows notes to be moved, processed, separated, and concatenated independently of its neighbors. It also ensures that notes remain useful even if the original source of information disappears.
+
+Taken from [Neuron Zettelkasten](https://neuron.zettel.page/)
 
 ## FLASH CARDS
 
