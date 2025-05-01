@@ -15,8 +15,8 @@ KEYSTONE TECHNIQUES AND TALENTS
 
 - **BORING VARIATIONS**
   - It is important to practice different variations of a problem, because you want to have more than one angle or perspective of the problem's definition and the solution structure.
-   - One can incoporate episodic frequency and priming of information but it is important to not contribute to misattribution in doing so.
-    - The contextual interference will increase long-term retention (without amassing practice sessions) and change in context/concept will inform's one's own subjective experience. 
+      - One can incoporate episodic frequency and priming of information but it is important to not contribute to misattribution in doing so.
+          - The contextual interference will increase long-term retention (without amassing practice sessions) and change in context/concept will inform's one's own subjective experience. 
 
 ## HARTMAN PROFICIENCY TAXONOMY
 
