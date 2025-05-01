@@ -4,9 +4,19 @@ A repository for solving and summarizing coding problems in preparation for tech
 I explore different facets of study aids for coding interviews and document the process for the struggling code-monkey I am, but could be a style suitable for the next primordial programmer.
 
 KEYSTONE TECHNIQUES AND TALENTS
-- SPACED REPETITION
-- GRADUAL PROGRESSION
-- BORING VARIATIONS
+- **SPACED REPETITION**
+   - a method where the subject is asked to remember a certain fact with the time intervals increasing each time the fact is presented or said. If the subject is able to recall the information correctly the time is doubled to further help them keep the information fresh in their mind to recall in the future. With this method, the patient is able to place the information in their long-term memory. If they are unable to remember the information they go back to the previous step and continue to practice to help make the technique lasting 
+
+      _Vance, D. E.; Farr, K. F. (September 2007). "Spaced Retrieval for Enhancing Memory: Implications for Nursing Practice and Research". Journal of Gerontological Nursing. 33 (9): 46–52. doi:10.3928/00989134-20070901-08. ISSN 0098-9134. PMID 17900000._
+- **GRADUAL TRAINING**
+   - Just as the ocean has a gradual shelf, a gradual slope, a gradual inclination, with a sudden drop-off only after a long stretch, in the same way this discipline of Dhamma (dhamma-vinaya) has a gradual training (anupubbasikkhā), a gradual performance (anupubbakiriyā), a gradual progression (anupubbapatipadā), with a penetration to gnosis only after a long stretch.
+
+      [Udana](https://ancient-buddhist-texts.net/Texts-and-Translations/Udana/Exalted-Utterances.pdf) 5.5  (p. 231)
+
+- **BORING VARIATIONS**
+  - It is important to practice different variations of a problem, because you want to have more than one angle or perspective of the problem's definition and the solution structure.
+   - One can incoporate episodic frequency and priming of information but it is important to not contribute to misattribution in doing so.
+    - The contextual interference will increase long-term retention (without amassing practice sessions) and change in context/concept will inform's one's own subjective experience. 
 
 ## HARTMAN PROFICIENCY TAXONOMY
 
