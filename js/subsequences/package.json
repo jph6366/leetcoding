@@ -6,16 +6,6 @@
   "author": "Jackson Hardee",
   "keywords": [],
   "type": "module",
-  "main": "dist/cjs/<insert-name>.js",
-  "module": "dist/esm/<insert-name>.js",
-  "browser": "dist/umd/<insert-name>.js",
-  "exports": {
-    ".": {
-      "browser": "./dist/umd/<insert-name>.js",
-      "import": "./dist/esm/<insert-name>.js",
-      "require": "./dist/cjs/<insert-name>.js"
-    }
-  },
   "files": [
     "dist"
   ],
