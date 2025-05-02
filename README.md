@@ -20,41 +20,41 @@ KEYSTONE TECHNIQUES AND TALENTS
 
     it is essential prerequisite for reaching the preparatory stage of the [dhyana](https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Dhyana) levels, deep meditative state or absorption characterized by lucid awareness and achieved by focusing the mind on a single object, and for the practice of [vipashyana](https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Vipashyana), insight into the true nature of reality
 
-``` typescript
-
-https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Flexibility
-
-‘One should be capable, straightforward, very straightforward, easy to speak to, flexible and modest.’ (Sn.143). 
-In the Jātaka he said: ‘Bend like a bow and be as pliant as bamboo, and then you will not be at odds with anyone.’ (Ja.VI,295). 
-Intellectual flexibility (cittamudutā) is important also (Dhs.45). 
-To have views and opinions but without being pedantic, dogmatic or rigid about them is an important aspect of detachment.
-
-Sogyal Rinpoche says:
-
-"The Tibetan word for ‘pliancy’ or ‘flexibility’, shin jang,
- means that you have some sense of how to ride your own mind. 
- 
- At first, you learn how to tame your mind. Having tamed your mind, you learn how to make friends with it. 
- 
- And having made friends with it, you learn how to make use of it. This is riding your mind. 
- 
- Shin jang is a very important term. 
- 
- It is often referred to as the fruition, or the complete accomplishment of shamatha. 
- 
- At that level you begin to develop what you could call ‘big shin jang’: your mind is soothed, 
- your body is completely relaxed. 
-
- But here, shin jang as an antidote is what you could call ‘early’ shin jang, not ‘final’ shin jang. 
-
- Here, you are simply learning to make friends with yourself. 
-
-
- You have some sense of relaxation and some sense of trust in yourself. 
- You have become less paranoid about your own mind. 
- You realize that your mind is workable and that there is an end to suffering 
- from your mind, of your mind, with your mind, and by your mind."
-```
+    ``` typescript
+    
+    https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Flexibility
+    
+    ‘One should be capable, straightforward, very straightforward, easy to speak to, flexible and modest.’ (Sn.143). 
+    In the Jātaka he said: ‘Bend like a bow and be as pliant as bamboo, and then you will not be at odds with anyone.’ (Ja.VI,295). 
+    Intellectual flexibility (cittamudutā) is important also (Dhs.45). 
+    To have views and opinions but without being pedantic, dogmatic or rigid about them is an important aspect of detachment.
+    
+    Sogyal Rinpoche says:
+    
+    "The Tibetan word for ‘pliancy’ or ‘flexibility’, shin jang,
+     means that you have some sense of how to ride your own mind. 
+     
+     At first, you learn how to tame your mind. Having tamed your mind, you learn how to make friends with it. 
+     
+     And having made friends with it, you learn how to make use of it. This is riding your mind. 
+     
+     Shin jang is a very important term. 
+     
+     It is often referred to as the fruition, or the complete accomplishment of shamatha. 
+     
+     At that level you begin to develop what you could call ‘big shin jang’: your mind is soothed, 
+     your body is completely relaxed. 
+    
+     But here, shin jang as an antidote is what you could call ‘early’ shin jang, not ‘final’ shin jang. 
+    
+     Here, you are simply learning to make friends with yourself. 
+    
+    
+     You have some sense of relaxation and some sense of trust in yourself. 
+     You have become less paranoid about your own mind. 
+     You realize that your mind is workable and that there is an end to suffering 
+     from your mind, of your mind, with your mind, and by your mind."
+    ```
 
 - **BORING VARIATIONS**
   - It is important to practice different variations of a problem, because you want to have more than one angle or perspective of the problem's definition and the solution structure.
