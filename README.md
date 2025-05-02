@@ -152,8 +152,3 @@ Below is a graph of the result of simulation that SM-17 is better than SM-2
 
 - Based on this we can say in the long-term SuperMemo is superior, although it simply locked to Windows making it hard access and manage on my GNU/Linux Desktop. I will be using Anki (on Ubuntu 22.04) with a modern spaced-repetition scheduler, which you can check out here at [FSRS4Anki](https://github.com/open-spaced-repetition/fsrs4anki).
 
-...
-
-## SYSTEM DESIGN
-
-...
