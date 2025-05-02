@@ -3,7 +3,7 @@
 A repository for solving and summarizing coding problems in preparation for technical interviews.
 I explore different facets of study aids for coding interviews and document the process for the struggling code-monkey I am, but could be a style suitable for the next primordial programmer.
 
-KEYSTONE TECHNIQUES AND TALENTS
+## KEYSTONE TECHNIQUES AND TALENTS
 
 - **SPACED REPETITION**
   - a method where the subject is asked to remember a certain fact with the time intervals increasing each time the fact is presented or said. If the subject is able to recall the information correctly the time is doubled to further help them keep the information fresh in their mind to recall in the future. With this method, the patient is able to place the information in their long-term memory. If they are unable to remember the information they go back to the previous step and continue to practice to help make the technique lasting
