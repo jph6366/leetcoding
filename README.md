@@ -11,7 +11,7 @@ I explore different facets of study aids for coding interviews and document the 
       _Vance, D. E.; Farr, K. F. (September 2007). "Spaced Retrieval for Enhancing Memory: Implications for Nursing Practice and Research". Journal of Gerontological Nursing. 33 (9): 46–52. doi:10.3928/00989134-20070901-08. ISSN 0098-9134. PMID 17900000._
 - **GRADUAL TRAINING**
   - This is certainly the best way to grow one's confidence in their ability, by taking one step at a time and conforming to this prerequisite of being disciplined in thought and memory.
-  - Just as the ocean has a gradual shelf, a gradual slope, a gradual inclination, with a sudden drop-off only after a long stretch, in the same way this discipline of Dhamma (dhamma-vinaya) has a gradual training (anupubbasikkhā), a gradual performance (anupubbakiriyā), a gradual progression (anupubbapatipadā), with a penetration to gnosis only after a long stretch.
+  - _Just as the ocean has a gradual shelf, a gradual slope, a gradual inclination, with a sudden drop-off only after a long stretch, in the same way this discipline of Dhamma (dhamma-vinaya) has a gradual training (anupubbasikkhā), a gradual performance (anupubbakiriyā), a gradual progression (anupubbapatipadā), with a penetration to gnosis only after a long stretch._
 
       [Udana](https://ancient-buddhist-texts.net/Texts-and-Translations/Udana/Exalted-Utterances.pdf) 5.5  (p. 231)
 
@@ -61,6 +61,29 @@ I explore different facets of study aids for coding interviews and document the 
   - It is important to practice different variations of a problem, because you want to have more than one angle or perspective of the problem's definition and the solution structure.
     - One can incoporate episodic frequency and priming of information but it is important to not contribute to misattribution in doing so.
       - The contextual interference will increase long-term retention (without amassing practice sessions) and change in context/concept will inform's one's own subjective experience.
+
+    ```
+    Quotes from Larry Bird
+
+    "As a kid, I always thought I was behind, and I needed that extra hour to catch up.
+    Jim Jones once told me, 'No matter how many shots you take, somewhere there's a kid out there taking one more.
+    If you dribble a million times a day, someone is dribbling a million and one...
+
+    Whenever I'd get ready to call it a day, I'd think about that other kid.
+    There are many times when you're better off practicing than playing,
+    but most people just don't understand that...
+
+    You can make all the excuses you want,
+    but if you're not mentally tough, you're not prepared to play every night,
+    you're not going to win."
+    
+    ```
+
+    - Larry holds a candle to the truth that simply doing practice alone is not enough.
+      - Of course Larry is an athlete, and we're focused improving proficiency of thought and memory whilst coding.
+        - What Larry is talking about is conditioning one's self to win a championship.
+          - You may not need to win a championship, merely just a software engineering job, or any accomplishment.
+            - But the nerves (when its 'go-time') are the same and the only way to have insight to the reality is through the conditioning of the concentrated mind and fluent retrieval of the object/subject of interest.
 
 ## HARTMAN PROFICIENCY TAXONOMY
 
