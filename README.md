@@ -10,6 +10,7 @@ I explore different facets of study aids for coding interviews and document the 
 
       _Vance, D. E.; Farr, K. F. (September 2007). "Spaced Retrieval for Enhancing Memory: Implications for Nursing Practice and Research". Journal of Gerontological Nursing. 33 (9): 46–52. doi:10.3928/00989134-20070901-08. ISSN 0098-9134. PMID 17900000._
 - **GRADUAL TRAINING**
+  - This is certainly the best way to grow one's confidence in their ability, by taking one step at a time and conforming to this prerequisite of being disciplined in thought and memory.
   - Just as the ocean has a gradual shelf, a gradual slope, a gradual inclination, with a sudden drop-off only after a long stretch, in the same way this discipline of Dhamma (dhamma-vinaya) has a gradual training (anupubbasikkhā), a gradual performance (anupubbakiriyā), a gradual progression (anupubbapatipadā), with a penetration to gnosis only after a long stretch.
 
       [Udana](https://ancient-buddhist-texts.net/Texts-and-Translations/Udana/Exalted-Utterances.pdf) 5.5  (p. 231)
