@@ -3,14 +3,15 @@
 A repository for solving and summarizing coding problems in preparation for technical interviews.
 I explore different facets of study aids for coding interviews and document the process for the struggling code-monkey I am, but could be a style suitable for the next primordial programmer.
 
-KEYSTONE TECHNIQUES AND TALENTS
+## KEYSTONE TECHNIQUES AND TALENTS
 
 - **SPACED REPETITION**
   - a method where the subject is asked to remember a certain fact with the time intervals increasing each time the fact is presented or said. If the subject is able to recall the information correctly the time is doubled to further help them keep the information fresh in their mind to recall in the future. With this method, the patient is able to place the information in their long-term memory. If they are unable to remember the information they go back to the previous step and continue to practice to help make the technique lasting
 
       _Vance, D. E.; Farr, K. F. (September 2007). "Spaced Retrieval for Enhancing Memory: Implications for Nursing Practice and Research". Journal of Gerontological Nursing. 33 (9): 46–52. doi:10.3928/00989134-20070901-08. ISSN 0098-9134. PMID 17900000._
 - **GRADUAL TRAINING**
-  - Just as the ocean has a gradual shelf, a gradual slope, a gradual inclination, with a sudden drop-off only after a long stretch, in the same way this discipline of Dhamma (dhamma-vinaya) has a gradual training (anupubbasikkhā), a gradual performance (anupubbakiriyā), a gradual progression (anupubbapatipadā), with a penetration to gnosis only after a long stretch.
+  - This is certainly the best way to grow one's confidence in their ability, by taking one step at a time and conforming to this prerequisite of being disciplined in thought and memory.
+  - _Just as the ocean has a gradual shelf, a gradual slope, a gradual inclination, with a sudden drop-off only after a long stretch, in the same way this discipline of Dhamma (dhamma-vinaya) has a gradual training (anupubbasikkhā), a gradual performance (anupubbakiriyā), a gradual progression (anupubbapatipadā), with a penetration to gnosis only after a long stretch._
 
       [Udana](https://ancient-buddhist-texts.net/Texts-and-Translations/Udana/Exalted-Utterances.pdf) 5.5  (p. 231)
 
@@ -20,46 +21,69 @@ KEYSTONE TECHNIQUES AND TALENTS
 
     it is essential prerequisite for reaching the preparatory stage of the [dhyana](https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Dhyana) levels, deep meditative state or absorption characterized by lucid awareness and achieved by focusing the mind on a single object, and for the practice of [vipashyana](https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Vipashyana), insight into the true nature of reality
 
-``` typescript
-
-https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Flexibility
-
-‘One should be capable, straightforward, very straightforward, easy to speak to, flexible and modest.’ (Sn.143). 
-In the Jātaka he said: ‘Bend like a bow and be as pliant as bamboo, and then you will not be at odds with anyone.’ (Ja.VI,295). 
-Intellectual flexibility (cittamudutā) is important also (Dhs.45). 
-To have views and opinions but without being pedantic, dogmatic or rigid about them is an important aspect of detachment.
-
-Sogyal Rinpoche says:
-
-"The Tibetan word for ‘pliancy’ or ‘flexibility’, shin jang,
- means that you have some sense of how to ride your own mind. 
- 
- At first, you learn how to tame your mind. Having tamed your mind, you learn how to make friends with it. 
- 
- And having made friends with it, you learn how to make use of it. This is riding your mind. 
- 
- Shin jang is a very important term. 
- 
- It is often referred to as the fruition, or the complete accomplishment of shamatha. 
- 
- At that level you begin to develop what you could call ‘big shin jang’: your mind is soothed, 
- your body is completely relaxed. 
-
- But here, shin jang as an antidote is what you could call ‘early’ shin jang, not ‘final’ shin jang. 
-
- Here, you are simply learning to make friends with yourself. 
-
-
- You have some sense of relaxation and some sense of trust in yourself. 
- You have become less paranoid about your own mind. 
- You realize that your mind is workable and that there is an end to suffering 
- from your mind, of your mind, with your mind, and by your mind."
-```
+    ``` typescript
+    
+    https://www.tibetanbuddhistencyclopedia.com/en/index.php?title=Flexibility
+    
+    ‘One should be capable, straightforward, very straightforward, easy to speak to, flexible and modest.’ (Sn.143). 
+    In the Jātaka he said: ‘Bend like a bow and be as pliant as bamboo, and then you will not be at odds with anyone.’ (Ja.VI,295). 
+    Intellectual flexibility (cittamudutā) is important also (Dhs.45). 
+    To have views and opinions but without being pedantic, dogmatic or rigid about them is an important aspect of detachment.
+    
+    Sogyal Rinpoche says:
+    
+    "The Tibetan word for ‘pliancy’ or ‘flexibility’, shin jang,
+     means that you have some sense of how to ride your own mind. 
+     
+     At first, you learn how to tame your mind. Having tamed your mind, you learn how to make friends with it. 
+     
+     And having made friends with it, you learn how to make use of it. This is riding your mind. 
+     
+     Shin jang is a very important term. 
+     
+     It is often referred to as the fruition, or the complete accomplishment of shamatha. 
+     
+     At that level you begin to develop what you could call ‘big shin jang’: your mind is soothed, 
+     your body is completely relaxed. 
+    
+     But here, shin jang as an antidote is what you could call ‘early’ shin jang, not ‘final’ shin jang. 
+    
+     Here, you are simply learning to make friends with yourself. 
+    
+    
+     You have some sense of relaxation and some sense of trust in yourself. 
+     You have become less paranoid about your own mind. 
+     You realize that your mind is workable and that there is an end to suffering 
+     from your mind, of your mind, with your mind, and by your mind."
+    ```
 
 - **BORING VARIATIONS**
   - It is important to practice different variations of a problem, because you want to have more than one angle or perspective of the problem's definition and the solution structure.
     - One can incoporate episodic frequency and priming of information but it is important to not contribute to misattribution in doing so.
       - The contextual interference will increase long-term retention (without amassing practice sessions) and change in context/concept will inform's one's own subjective experience.
+
+    ```
+    Quotes from Larry Bird
+
+    "As a kid, I always thought I was behind, and I needed that extra hour to catch up.
+    Jim Jones once told me, 'No matter how many shots you take, somewhere there's a kid out there taking one more.
+    If you dribble a million times a day, someone is dribbling a million and one...
+
+    Whenever I'd get ready to call it a day, I'd think about that other kid.
+    There are many times when you're better off practicing than playing,
+    but most people just don't understand that...
+
+    You can make all the excuses you want,
+    but if you're not mentally tough, you're not prepared to play every night,
+    you're not going to win."
+    
+    ```
+
+    - Larry holds a candle to the truth that simply doing practice alone is not enough.
+      - Of course Larry is an athlete, and we're focused improving proficiency of thought and memory whilst coding.
+        - What Larry is talking about is conditioning one's self to win a championship.
+          - You may not need to win a championship, merely just a software engineering job, or any accomplishment.
+            - But the nerves (when its 'go-time') are the same and the only way to have insight to the reality is through the conditioning of the concentrated mind and fluent retrieval of the object/subject of interest.
 
 ## HARTMAN PROFICIENCY TAXONOMY
 
@@ -152,8 +176,3 @@ Below is a graph of the result of simulation that SM-17 is better than SM-2
 
 - Based on this we can say in the long-term SuperMemo is superior, although it simply locked to Windows making it hard access and manage on my GNU/Linux Desktop. I will be using Anki (on Ubuntu 22.04) with a modern spaced-repetition scheduler, which you can check out here at [FSRS4Anki](https://github.com/open-spaced-repetition/fsrs4anki).
 
-...
-
-## SYSTEM DESIGN
-
-...
