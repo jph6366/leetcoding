@@ -1,4 +1,4 @@
-py-base
+subsequences
 =============
 
 .. image:: https://img.shields.io/pypi/v/python_coding.svg

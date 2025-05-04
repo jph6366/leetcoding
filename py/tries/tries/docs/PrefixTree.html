@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>PrefixTree.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>PrefixTree.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <h1>=== Preface ===</h1>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      <h2>Implementing a trie is a string processing problem and search trees are a fundamental building block.</h2>
+<p>For use in locating records stored within a low-speed memory medium
+where they are identifiable by a key word or words of 
+variable length on a machine not equipped to accomplish this automatically</p>
+<h3>Also known as a digital tree or prefix tree.</h3>
+<h2>Unlike a binary search tree, nodes in a trie do no store their associated key.</h2>
+<h3>Information derived from this lecture and paper</h3>
+<ul>
+<li>https://algs4.cs.princeton.edu/lectures/keynote/52Tries.pdf</li>
+<li>File Searching Using Variable Length Keys by RENE DE LA BRIANDAIS</li>
+</ul>
+<h2>Tries, from retrieval, but pronounced &lsquo;try&rsquo;</h2>
+<ul>
+<li>Store character in nodes (not keys).</li>
+<li>Each node has &lsquo;R&rsquo; children, one for each possible character.
+    (for now, we do not draw null links)</li>
+</ul>
+<h4>Now we have an R-way Trie, since we&rsquo;ll need references to &lsquo;R&rsquo; nodes</h4>
+<h2>Search in a Trie</h2>
+<p>Follow links corresponding to each character in the key.</p>
+<ul>
+<li>Search hit: node where search ends has a non-null value.</li>
+<li>Search miss: reach null link or node where search ends null value</li>
+</ul>
+<h2>Trie performance</h2>
+<ul>
+<li>Search hit. Need to examine all &lsquo;L&rsquo; characters for equality</li>
+<li>Search miss.<ul>
+<li>Could have mismatch on first character.</li>
+<li>Typical case: examine only a few characters (sublinear).</li>
+</ul>
+</li>
+<li>Space. &lsquo;R&rsquo; null links at each leaf</li>
+</ul>
+<p>(but sublinear space possible if many short strings share common prefixes)</p>
+<ul>
+<li>Bottom line. Fast search hit and even faster search miss, but wastes space</li>
+</ul>
+<h2>Deletion in an R-way Trie</h2>
+<p>To delete a key-value pair:</p>
+<ul>
+<li>Find the node corresponding to key and set value to null.</li>
+<li>If node has null value and all null links, remove that node (and recur).</li>
+</ul>
+<h1>BORING VARIATION</h1>
+<h3>Challenge. Use less memory, e.g., 65,536-way trie for Unicode!</h3>
+<h1>Ternary search Tries</h1>
+<ul>
+<li>Store characters and values in nodes (not keys).</li>
+<li>Each node has 3 children: smaller(left), equal(middle), larger(right)</li>
+</ul>
+<h2>Search in a Ternary search Trie</h2>
+<p>Follow links corresponding to each character in the key.</p>
+<ul>
+<li>If less, take left link; if greater take right link.</li>
+<li>If equal, take the middle link and move to the next key character.</li>
+</ul>
+<h2>TST performance</h2>
+<ul>
+<li>Bottom line. TST is as fast as hashing (for string keys), space efficient</li>
+</ul>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <h1>=== Warmup ===</h1>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
