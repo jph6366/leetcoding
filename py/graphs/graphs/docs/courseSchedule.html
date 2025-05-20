@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>courseSchedule.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>courseSchedule.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      <h3><span id="thought-process" href="thought-process"> Thought Process </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <h3>Interviewer:</h3>
+<p>You are given an array prerequisites
+where prerequisites[i] = [a, b]
+indicates that you must take course b first
+if you want to take course a.</p>
+<p>The pair [0, 1], indicates that must take course 1
+before taking course 0.</p>
+<p>There are a total of numCourses courses you are required to take,
+labeled from 0 to numCourses - 1.</p>
+<p>Return true if it is possible to finish all courses,
+otherwise return false.</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <h1>=== Preface ===</h1>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      <h2>Validating this course schedule is a traversal problem.</h2>
+<h2>This is a good problem for using a directed acyclic graph.</h2>
+<h3>More specificly, modeling the course schedule evaluation using a partial order.</h3>
+<h4>Characterizing a DAG:</h4>
+<ul>
+<li>A directed graph, G, is acyclic if DFS of G yields no back edges</li>
+</ul>
+<h4>&ldquo;Sorting&rdquo; a DAG:</h4>
+<p>Topological sorting is a linear ordering of vertices of G
+such that for every directed edge (u, v), from vertex u to vertex v, u comes before v in the ordering.</p>
+<ul>
+<li>a topological ordering is just a valid sequence for the tasks</li>
+<li>a topological sort is a graph traversal in which each node v is visited only after all its dependencies are visited.</li>
+</ul>
+<p>A graph has a topological ordering/sorting if and only if it is a directed acyclic graph.
+There are three mathematical properties to a directed acyclic graph, a directed graph with no directed cycles.</p>
+<ul>
+<li>Reachability, refers to general st-connectivity problem for directed graphs, the problem of finding a path from one vertex to another in a graph.</li>
+<li>
+<p>two vertices u and v are ordered as u &lt;= v exactly where there exists a directed path from u to v in the DAG.</p>
+</li>
+<li>
+<p>Transitive closure, refers to determine the connected components of directed graphs, constructing a data structure that makes it possible to answer reachability questions.</p>
+</li>
+<li>
+<p>the adjancency relation of DAG is the reachability relation of the DAG and strict partial order</p>
+<ul>
+<li>
+<p>strict partial order is a homogeneous relation &lt; on a set P that is irreflexive, asymmetric, and transitive:</p>
+</li>
+<li>
+<p>Irreflexivity: no element is related to itself</p>
+</li>
+<li>Asymmetry: the binary relation R on set X where for all a,b belonging to X, if as is related to b then b is not related to a</li>
+<li>Transitivity: the binary relation R on set X is transitive if, for all elements a, b, c in X, wherever R relates a to b and b to c, then R also relates a to c</li>
+</ul>
+</li>
+<li>
+<p>Transitive reduction, refers to a graph that has the fewest edges possible and has the same reachability relation as the original graph</p>
+</li>
+<li>The transitive reduction of a finite directed acyclic graph G is unique, and consists of edges of G that form the only path between their endpoints.<ul>
+<li>transitive and reductive properties coincides with a minimum spanning subgraph of the given graph</li>
+</ul>
+</li>
+</ul>
+<h3>Structuring the problem:</h3>
+<p>A list in topological order has a special property.</p>
+<p>Simply expressed: proceeding element to element along any path in the network,
+one passes through the list in one direction only.</p>
+<p>So as long as the graph of prequisites have no circular dependencies then we can return true.</p>
+<h4>There are two standard representations of graphs</h4>
+<ol>
+<li>
+<p>Adjacency List</p>
+</li>
+<li>
+<p>Consists of an array that has one list per vertex</p>
+</li>
+<li>Space for directed graph Θ(|V|+|E|)</li>
+<li>Time querying directed graph Θ(|V|)</li>
+<li>Time for adding an edge or vertex Θ(1)</li>
+<li>Time for removing a vertex from directed graph Θ(|V|+|E|)</li>
+<li>
+<p>Time for removing an edge from directed graph Θ(|E|)</p>
+</li>
+<li>
+<p>Adjacency Matrix</p>
+</li>
+<li>
+<p>|V| x |V| matrix A, Number vertices from 1 to |V| in some arbitrary manner</p>
+</li>
+<li>Space for directed graph Θ(|V|^2)</li>
+<li>Time querying directed graph Θ(1)</li>
+<li>Time for adding a vertex Θ(|V|^2)</li>
+<li>Time for adding an edge Θ(1)</li>
+<li>Time for removing a vertex from directed graph Θ(|V|^2)</li>
+<li>Time for removing an edge from directed graph Θ(1)</li>
+</ol>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      <h1>== Warm-Up ===</h1>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-7'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-7'>#</a>
+      </div>
+      <h1>=== Purpose ===</h1>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
