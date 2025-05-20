@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-
+#
+#
+from collections import deque
 # === Thought Process ===
 
 """
@@ -101,7 +103,93 @@ such that adding up all the values along the path equals targetSum.
 
 """
 
+# Definition for a binary tree node.
+class TreeNode:
+     def __init__(self, val=0, left=None, right=None):
+         self.val = val
+         self.left = left
+         self.right = right
+
+class Solution:
+    def hasPathSum(self, root, targetSum) -> bool:
+        if not root:
+            return False
+
+        stack = [(root, targetSum - root.val)]
+        while stack:
+            node, curr_sum = stack.pop()
+            if not node.left and not node.right and curr_sum == 0:
+                return True
+            if node.right:
+                stack.append((node.right, curr_sum - node.right.val))
+            if node.left:
+                stack.append((node.left, curr_sum - node.left.val))
+        return False
+"""
+ time Θ(n)
+
+  space Θ(n)
+"""
 ## === Purpose ===
 """
 
 """
+
+## === Cycle Detection using DFS ===
+
+class Solution:
+    def canFinish(self, numCourses, prerequisites) -> bool:
+        # Map each course to its prerequisites
+        preMap = {i: [] for i in range(numCourses)}
+        for crs, pre in prerequisites:
+            preMap[crs].append(pre)
+
+        # Store all courses along the current DFS path
+        visiting = set()
+
+        def dfs(crs):
+            if crs in visiting:
+                # Cycle detected
+                return False
+            if preMap[crs] == []:
+                return True
+
+            visiting.add(crs)
+            for pre in preMap[crs]:
+                if not dfs(pre):
+                    return False
+            visiting.remove(crs)
+            preMap[crs] = []
+            return True
+
+        for c in range(numCourses):
+            if not dfs(c):
+                return False
+        return True
+
+
+## === Topological Sort using Kahn's Algorithm ===
+
+class Solution:
+    def canFinish(self, numCourses, prerequisites) -> bool:
+        indegree = [0] * numCourses
+        adj = [[] for i in range(numCourses)]
+        for src, dst in prerequisites:
+            indegree[dst] += 1
+            adj[src].append(dst)
+
+        q = deque()
+        for n in range(numCourses):
+            if indegree[n] == 0:
+                q.append(n)
+
+        finish = 0
+        while q:
+            node = q.popleft()
+            finish += 1
+            for nei in adj[node]:
+                indegree[nei] -= 1
+                if indegree[nei] == 0:
+                    q.append(nei)
+
+        return finish == numCourses
